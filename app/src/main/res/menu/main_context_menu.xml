@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/main_item_in_heap"
+          android:title="@string/in_the_heap" />
+    <item android:id="@+id/main_item_Successed"
+          android:title="@string/mark_success" />
+    <item android:id="@+id/main_item_transfer"
+          android:title="@string/tomorrow" />
+</menu>

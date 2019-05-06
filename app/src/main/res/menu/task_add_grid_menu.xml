@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/distribute" android:id="@+id/task_add_grid_ditribute" android:visible="true"
+          app:showAsAction="always"/>
+    <item android:title="@string/edit" android:id="@+id/task_add_grid_edit" android:visible="true"
+          app:showAsAction="always"/>
+    <item android:title="@string/delete" android:id="@+id/task_add_grid_delete" android:visible="true"
+          app:showAsAction="always"/>
+</menu>

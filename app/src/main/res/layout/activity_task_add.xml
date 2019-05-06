@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="ru.astralight.koksharov.organizer.ui.TaskAddActivity" android:orientation="vertical">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+                android:text="@string/left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/add_task_left" android:layout_weight="1"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+        <Space
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="5"/>
+    </LinearLayout>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="text|textPersonName"
+                android:text=""
+                android:ems="10"
+                android:id="@+id/add_task_name" android:layout_weight="3"/>
+        <Button
+                android:text="@string/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/add_task_add" android:layout_weight="1"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+    </LinearLayout>
+    <GridView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" android:id="@+id/add_task_grid_view"/>
+</LinearLayout>

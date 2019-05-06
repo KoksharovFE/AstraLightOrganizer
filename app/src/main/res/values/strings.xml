@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">AstraLight Organizer</string>
+    <string name="left">Left</string>
+    <string name="right">Right</string>
+    <string name="_2019_03_25">_2019_03_25</string>
+    <string name="stats">Stats</string>
+    <string name="in_the_heap">In the Heap</string>
+    <string name="mark_success">Mark Success</string>
+    <string name="tomorrow">Tomorrow</string>
+    <string name="add">Add</string>
+    <string name="add_hint">Enter your task description</string>
+    <string name="distribute">Distribute</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="distribution_one_day">One Day</string>
+    <string name="distribution_perioically">Periodically</string>
+    <string name="distribution_one_every_day">Every day</string>
+</resources>

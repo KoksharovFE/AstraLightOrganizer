@@ -1,0 +1,14 @@
+<resources>
+    <declare-styleable name="MyView">
+        <attr name="exampleString" format="string"/>
+        <attr name="exampleDimension" format="dimension"/>
+        <attr name="exampleColor" format="color"/>
+        <attr name="exampleDrawable" format="color|reference"/>
+    </declare-styleable>
+    <declare-styleable name="AstraMultiChoseCalendar">
+        <attr name="exampleStringAMCC" format="string"/>
+        <attr name="exampleDimensionAMCC" format="dimension"/>
+        <attr name="exampleColorAMCC" format="color"/>
+        <attr name="exampleDrawableAMCC" format="color|reference"/>
+    </declare-styleable>
+</resources>

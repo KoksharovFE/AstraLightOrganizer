@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AstraLight Organizer</string>
+    <string name="left">Налево</string>
+    <string name="right">Направо</string>
+    <string name="_2019_03_25">_2019_03_25</string>
+    <string name="stats">Статистика</string>
+    <string name="in_the_heap">В общие</string>
+    <string name="mark_success">Выполнено</string>
+    <string name="tomorrow">На завтра</string>
+    <string name="add">Добавить</string>
+    <string name="add_hint">Ввод описания задачи</string>
+    <string name="distribute">Распределить</string>
+    <string name="edit">Редактировать</string>
+    <string name="delete">Удалить</string>
+    <string name="distribution_one_day">Однажды</string>
+    <string name="distribution_perioically">Периодически</string>
+    <string name="distribution_one_every_day">Каждый день</string>
+</resources>

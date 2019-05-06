@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:background="@android:color/background_light"
+        android:fitsSystemWindows="true"
+        android:id="@+id/coordinatorLayout" android:orientation="vertical">
+
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            style="?android:attr/buttonBarStyle" >
+        <Button
+                android:text="@string/left"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/main_left" android:layout_weight="1"
+                style="?android:attr/buttonBarButtonStyle" />
+        <Button
+                android:text="@string/_2019_03_25"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:layout_weight="4" android:id="@+id/main_datetime"
+                style="?android:attr/buttonBarButtonStyle" />
+        <Button
+                android:text="@string/right"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/main_right" android:layout_weight="1"
+                style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+    <ListView
+            android:layout_width="match_parent"
+            android:layout_height="400dp" android:id="@+id/main_listview"/>
+    <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/nestedScrollView"
+    >
+        <!--app:layout_behavior="@string/appbar_scrolling_view_behavior"-->
+
+        <!--android:text="@string/lorem"-->
+        <!--android:padding="@dimen/activity_horizontal_margin"-->
+
+    </android.support.v4.widget.NestedScrollView>
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            style="?android:attr/buttonBarStyle">
+        <Button
+                android:text="@string/stats"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/main_statistics" android:layout_weight="1"
+                style="?android:attr/buttonBarButtonStyle" />
+        <Button
+                android:text="@string/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:id="@+id/main_add" android:layout_weight="1"
+                style="?android:attr/buttonBarButtonStyle" />
+    </LinearLayout>
+
+</LinearLayout>
