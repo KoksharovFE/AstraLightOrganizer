@@ -8,11 +8,6 @@ import android.widget.TextView
 import com.astra.koksharov.astralightorganizer.R
 import com.astra.koksharov.ui.calendar.AstraMultiChoseCalendar
 import java.lang.ref.WeakReference
-import android.graphics.BitmapFactory
-import android.graphics.Bitmap
-import android.R.attr.bitmap
-import android.graphics.drawable.BitmapDrawable
-import android.graphics.drawable.Drawable
 import android.support.v4.content.res.ResourcesCompat
 
 
@@ -26,7 +21,7 @@ class Statistics : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_statistics)
 
-        info = findViewById<TextView>(R.id.statistics_textview)
+        info = findViewById<TextView>(R.id.statistics_textview)//
 
         AMCC = findViewById<AstraMultiChoseCalendar>(R.id.stats_mutishosecalendar)
 
@@ -37,7 +32,7 @@ class Statistics : AppCompatActivity() {
 //        val b = BitmapFactory.decodeResource(resources, R.drawable.ic_launcher_background)
         val d = ResourcesCompat.getDrawable(getResources(), R.drawable.ic_launcher_background, null);
 //        BitmapDrawable(resources, bitmap)
-        AMCC.exampleDrawable = d
+//        AMCC._exampleDrawable = d
 
         h = MyHandler(this)
 

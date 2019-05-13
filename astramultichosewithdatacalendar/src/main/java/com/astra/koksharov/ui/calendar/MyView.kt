@@ -16,9 +16,9 @@
 // */
 //class MyView : View {
 //
-//    private var _exampleString: String? = null // TODO: use a default from R.string...
-//    private var _exampleColor: Int = Color.RED // TODO: use a default from R.color...
-//    private var _exampleDimension: Float = 0f // TODO: use a default from R.dimen...
+//    private var exampleString: String? = null // TODO: use a default from R.string...
+//    private var exampleColor: Int = Color.RED // TODO: use a default from R.color...
+//    private var exampleDimension: Float = 0f // TODO: use a default from R.dimen...
 //
 //    private var textPaint: TextPaint? = null
 //    private var textWidth: Float = 300f
@@ -28,9 +28,9 @@
 //     * The text to draw
 //     */
 //    var exampleString: String?
-//        get() = _exampleString
+//        get() = exampleString
 //        set(value) {
-//            _exampleString = value
+//            exampleString = value
 //            invalidateTextPaintAndMeasurements()
 //        }
 //
@@ -38,9 +38,9 @@
 //     * The font color
 //     */
 //    var exampleColor: Int
-//        get() = _exampleColor
+//        get() = exampleColor
 //        set(value) {
-//            _exampleColor = value
+//            exampleColor = value
 //            invalidateTextPaintAndMeasurements()
 //        }
 //
@@ -48,9 +48,9 @@
 //     * In the example view, this dimension is the font size.
 //     */
 //    var exampleDimension: Float
-//        get() = _exampleDimension
+//        get() = exampleDimension
 //        set(value) {
-//            _exampleDimension = value
+//            exampleDimension = value
 //            invalidateTextPaintAndMeasurements()
 //        }
 //
@@ -84,16 +84,16 @@
 //            attrs, R.styleable.MyView, defStyle, 0
 //        )
 //
-//        _exampleString = a.getString(
+//        exampleString = a.getString(
 //            R.styleable.MyView_exampleString
 //        )
-//        _exampleColor = a.getColor(
+//        exampleColor = a.getColor(
 //            R.styleable.MyView_exampleColor,
 //            exampleColor
 //        )
 //        // Use getDimensionPixelSize or getDimensionPixelOffset when dealing with
 //        // values that should fall on pixel boundaries.
-//        _exampleDimension = a.getDimension(
+//        exampleDimension = a.getDimension(
 //            R.styleable.MyView_exampleDimension,
 //            exampleDimension
 //        )

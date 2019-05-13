@@ -76,16 +76,16 @@ class OrganizerCalendar : View {
 //            attrs, R.styleable.OrganizerCalendar, defStyle, 0
 //        )
 //
-//        _exampleString = a.getString(
+//        exampleString = a.getString(
 //            R.styleable.OrganizerCalendar_exampleString
 //        )
-//        _exampleColor = a.getColor(
+//        exampleColor = a.getColor(
 //            R.styleable.OrganizerCalendar_exampleColor,
 //            exampleColor
 //        )
 //        // Use getDimensionPixelSize or getDimensionPixelOffset when dealing with
 //        // values that should fall on pixel boundaries.
-//        _exampleDimension = a.getDimension(
+//        exampleDimension = a.getDimension(
 //            R.styleable.OrganizerCalendar_exampleDimension,
 //            exampleDimension
 //        )

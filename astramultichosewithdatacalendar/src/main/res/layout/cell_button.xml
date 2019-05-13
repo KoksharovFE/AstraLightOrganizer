@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:id="@+id/customButtonLayout" xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_height="wrap_content" style="@android:style/Widget.Button"
+              android:orientation="vertical"
+              android:layout_width="match_parent">
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        <Space
+                android:layout_width="match_parent"
+                android:layout_weight="3"
+                android:layout_height="match_parent"/>
+        <TextView android:text="First" android:id="@+id/cellMarkTextView"
+                  android:layout_weight="1"
+                  android:layout_width="wrap_content" android:layout_height="wrap_content"
+                  android:textColor="#000"/>
+    </LinearLayout>
+    <TextView android:textColor="#000" android:text="Second"
+              android:layout_height="wrap_content" android:id="@+id/cellMainTextView"
+              android:layout_width="wrap_content"/>
+</LinearLayout>
