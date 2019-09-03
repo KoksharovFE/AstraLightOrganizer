@@ -60,12 +60,14 @@ class Statistics : AppCompatActivity() {
 
     public fun thread_renew(){
         var counter: Int = 0;
-        while (true){
+        //while (true){
+        for(i in 0..12){
 //            var infos = findViewById<TextView>(R.id.statistics_textview)
             counter++
             var mes = Message()
             mes.arg1 = counter
             h?.sendMessage(mes)
+
 //            h?.sendEmptyMessage(counter);
 //            infos.setText("${infos.text}\n${counter}")
             Thread.sleep(1000)
