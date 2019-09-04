@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/customCellButtonLayout"
-    style="@android:style/Widget.Button"
+    android:layout_height="wrap_content" style="@android:style/Widget.Button"
+    android:orientation="vertical"
     android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:orientation="vertical">
-
+    android:clickable="true"
+    android:focusable="true"
+    android:id="@+id/customCalendarButtonLayout"
+    >
     <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal">
-
+        android:id="@+id/customCalendarButtonInnerLayout"
+        >
         <Space
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="3" />
-
-        <TextView
-            android:id="@+id/cellMarkTextView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:layout_height="match_parent"/>
+        <TextView android:text="First" android:id="@+id/cellMarkTextView"
             android:layout_weight="1"
-            android:text="First"
-            android:textColor="#000" />
+            android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:textColor="#000"/>
     </LinearLayout>
-
-    <TextView
-        android:id="@+id/cellMainTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Second"
-        android:textColor="#000" />
+    <TextView android:textColor="#000" android:text="Second"
+        android:layout_height="wrap_content" android:id="@+id/cellMainTextView"
+        android:layout_width="wrap_content"/>
 </LinearLayout>

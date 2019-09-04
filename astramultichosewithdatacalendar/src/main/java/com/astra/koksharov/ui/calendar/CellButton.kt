@@ -40,10 +40,10 @@ class CellButton(context: Context?, attrs: AttributeSet?) : android.support.v7.w
         }
 
     init {
-        val layoutInflater = context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
-        val view = layoutInflater.inflate(R.layout.cell_button, parent as (ViewGroup?))
+        val layoutInflater = LayoutInflater.from(context)//context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view = layoutInflater.inflate(R.layout.cell_button, null)//parent as (ViewGroup?)
 
-//        view_group.add(view)
+//        view_group.add(view)z
 //        icon = view.findViewById(R.id.xbutton2_icon) as ImageView
         main_tv = view.findViewById(R.id.cellMainTextView) as TextView
         mark_tv = view.findViewById(R.id.cellMarkTextView) as TextView
@@ -54,7 +54,10 @@ class CellButton(context: Context?, attrs: AttributeSet?) : android.support.v7.w
             date = Calendar.getInstance().time
         }
 //        val inflater = getSystemService(context) as (LayoutInflater);
-
+        requestLayout()
+        this.invalidate()
+        this.refreshDrawableState()
+        invalidate()
     }
 
     constructor(context: Context?, attrs: AttributeSet?, mainTxt: String, markTxt: String, date : Date) : this(context, attrs){
@@ -62,6 +65,11 @@ class CellButton(context: Context?, attrs: AttributeSet?) : android.support.v7.w
         main_tv.text = mainTxt
         mark_tv.text = markTxt
         this.date = date
+
+        requestLayout()
+        this.invalidate()
+        this.refreshDrawableState()
+        invalidate()
     }
 
     public fun buttonClicked(chosenState : Boolean): Unit {
@@ -71,6 +79,7 @@ class CellButton(context: Context?, attrs: AttributeSet?) : android.support.v7.w
 
         Log.i("<CELL BUTTON>", "MAIN:${main_tv.text} MARK:${mark_tv.text} Color:${backColor}")
 
+        requestLayout()
     }
 
 

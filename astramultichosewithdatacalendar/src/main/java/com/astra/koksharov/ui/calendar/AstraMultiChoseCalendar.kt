@@ -4,15 +4,16 @@ import android.content.Context
 import android.graphics.Color
 import android.util.AttributeSet
 import android.util.Log
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.ListView
-import android.widget.TableLayout
-import android.widget.TableRow
-import android.widget.TextView
 import com.astra.koksharov.astramultichosewithdatacalendar.R
 import android.view.ViewGroup
+import android.widget.*
 import java.util.*
+import java.util.concurrent.TimeUnit
 import kotlin.collections.ArrayList
+
+
 
 
 /**
@@ -39,29 +40,54 @@ class AstraMultiChoseCalendar(context: Context?, attrs: AttributeSet? = null) : 
 
         setStretchAllColumns(true);
 //        addContent(data);
-
-
+        val layoutInflater = LayoutInflater.from(context)//context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
+        val view = layoutInflater.inflate(R.layout.astra_multi_chose_calendar, null)//parent as (ViewGroup?)
+        val scrollView = view.findViewById<ScrollView>(R.id.astra_multi_chose_table_scroll)
+    //astra_multi_chose_table_scroll
 
 //        tableRow.setBackgroundResource(R.drawable.mountain_fog)
-        for (j in 1..20) {
-            val tableRow = TableRow(context)
+        var calMY = Calendar.getInstance()
+        calMY.set(Calendar.YEAR, calMY.get(Calendar.YEAR) -1 )
+        var calPY = Calendar.getInstance()
+        calPY.set(Calendar.YEAR, calPY.get(Calendar.YEAR) +1 )
 
-            this.addView(tableRow, TableLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT));//
 
-            rows.add(tableRow)
 
-            tableRow.layoutParams = TableLayout.LayoutParams(
-                TableLayout.LayoutParams.WRAP_CONTENT,
-                TableLayout.LayoutParams.WRAP_CONTENT
-            )
+        for (i in 1..7){
+            this.setColumnShrinkable(i, true)
+        }
 
-            var tv = TextView(context, attrs)
-            tv.text = "May ${j}:"
-            tableRow.addView(tv)
-            for (i in 1..12) {
-                this.setColumnShrinkable(i, true);
+        var counter = 0;
+        var tableRow = TableRow(context)
 
-                var btn = CellButton(context, attrs, "0", "${i}", Calendar.getInstance().time)
+        while (calMY.before(calPY)) {//1..20
+
+            val result = calMY.getTime()
+            calMY.add(Calendar.DATE, 1)
+
+            if (counter % 7 == 0) {
+                tableRow = TableRow(context)
+
+                this.addView(
+                    tableRow,
+                    TableLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+                );//
+
+                rows.add(tableRow)
+
+                tableRow.layoutParams = TableLayout.LayoutParams(
+                    TableLayout.LayoutParams.WRAP_CONTENT,
+                    TableLayout.LayoutParams.WRAP_CONTENT
+                )
+
+                var tv = TextView(context, attrs)
+                tv.text = "${calMY.get(Calendar.YEAR)} / ${calMY.get(Calendar.MONTH) + 1}  ${calMY.get(Calendar.DAY_OF_MONTH)}:"
+                tableRow.addView(tv)
+
+            }
+//            for (i in 1..12) {
+
+                var btn = CellButton(context, attrs, "0", "${counter}", result)
 //            btn.layoutParams = ViewGroup.LayoutParams(100, 100)
                 btn.setOnClickListener(View.OnClickListener {
                     if (!firstChosen) {
@@ -91,9 +117,15 @@ class AstraMultiChoseCalendar(context: Context?, attrs: AttributeSet? = null) : 
                     }
 
                 })
+
                 tableRow.addView(btn)
                 buttons.add(btn)
-            }
+
+                counter++
+//            }
+
+            scrollView.scrollTo(10000,  100)//scrollView.maxScrollAmount / 2
+
         }
 
 
