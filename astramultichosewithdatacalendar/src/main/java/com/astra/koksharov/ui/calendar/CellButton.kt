@@ -42,6 +42,7 @@ class CellButton(context: Context?, attrs: AttributeSet?) : android.support.v7.w
     init {
         val layoutInflater = LayoutInflater.from(context)//context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = layoutInflater.inflate(R.layout.cell_button, null)//parent as (ViewGroup?)
+//        layoutParams = ;
 
 //        view_group.add(view)z
 //        icon = view.findViewById(R.id.xbutton2_icon) as ImageView
