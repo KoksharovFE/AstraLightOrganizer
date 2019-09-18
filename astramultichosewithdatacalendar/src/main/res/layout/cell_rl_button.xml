@@ -1,0 +1,34 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:id="@+id/cellRLRelativeLayout"
+    >
+
+    <TextView
+        android:id="@+id/cellRLMarkTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="5dp"
+        android:layout_weight="1"
+        android:text="1"
+        android:textColor="@color/color_red"
+        android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/cellRLMainTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="5dp"
+        android:layout_marginEnd="15dp"
+        android:layout_weight="6"
+        android:text="2"
+        android:textSize="18sp" />
+</RelativeLayout>

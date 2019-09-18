@@ -25,10 +25,6 @@ class Statistics : AppCompatActivity() {
 
         AMCC = findViewById<AstraMultiChoseCalendar>(R.id.stats_mutishosecalendar)
 
-        AMCC.exampleString = "FIREEE"
-        AMCC.exampleColor = 0xFF00FF
-        AMCC.exampleDimension = 300f
-
 //        val b = BitmapFactory.decodeResource(resources, R.drawable.ic_launcher_background)
         val d = ResourcesCompat.getDrawable(getResources(), R.drawable.ic_launcher_background, null);
 //        BitmapDrawable(resources, bitmap)

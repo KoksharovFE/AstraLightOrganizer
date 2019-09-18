@@ -1,4 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
+
+<!--<com.astra.koksharov.ui.calendar.CellButton android:id="@+id/cellButtonMCC"-->
+<!--    android:layout_width="wrap_content"-->
+<!--    android:layout_height="wrap_content"-->
+<!--    xmlns:android="http://schemas.android.com/apk/res/android">-->
+    <!--    android:onClick="sendMessage"-->
+<!--    android:text="@string/button_send"-->
+<!--    android:background="@drawable/button_custom"-->
+
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_height="wrap_content" style="@android:style/Widget.Button"
     android:orientation="vertical"
@@ -26,3 +36,4 @@
         android:layout_height="wrap_content" android:id="@+id/cellMainTextView"
         android:layout_width="wrap_content"/>
 </LinearLayout>
+<!--</com.astra.koksharov.ui.calendar.CellButton>-->

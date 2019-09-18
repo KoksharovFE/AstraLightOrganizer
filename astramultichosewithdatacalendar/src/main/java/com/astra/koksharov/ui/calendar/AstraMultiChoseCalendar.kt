@@ -21,9 +21,9 @@ import kotlin.collections.ArrayList
  */
 class AstraMultiChoseCalendar(context: Context?, attrs: AttributeSet? = null) : TableLayout(context, attrs) {
     var firstChosen = false
-    var firstChosenButton : CellButton? = null
+    var firstChosenButton : RelativeLayoutButton? = null //CellButton? = null
     var secondChosen = false
-    var buttons = ArrayList<CellButton>()
+    var buttons = ArrayList<RelativeLayoutButton>()//CellButton
 
 //    private lateinit var listView : ListView
     private var rows = ArrayList<TableRow>()
@@ -43,12 +43,16 @@ class AstraMultiChoseCalendar(context: Context?, attrs: AttributeSet? = null) : 
         val layoutInflater = LayoutInflater.from(context)//context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = layoutInflater.inflate(R.layout.astra_multi_chose_calendar, null)//parent as (ViewGroup?)
         val scrollView = view.findViewById<ScrollView>(R.id.astra_multi_chose_table_scroll)
+//        this.setText
+
     //astra_multi_chose_table_scroll
 
 //        tableRow.setBackgroundResource(R.drawable.mountain_fog)
         var calMY = Calendar.getInstance()
+//        calMY.set(Calendar.DAY_OF_MONTH, calMY.get(Calendar.DAY_OF_MONTH) -1 )
         calMY.set(Calendar.YEAR, calMY.get(Calendar.YEAR) -1 )
         var calPY = Calendar.getInstance()
+//        calPY.set(Calendar.DAY_OF_MONTH, calPY.get(Calendar.DAY_OF_MONTH) +1 )
         calPY.set(Calendar.YEAR, calPY.get(Calendar.YEAR) +1 )
 
 
@@ -58,7 +62,30 @@ class AstraMultiChoseCalendar(context: Context?, attrs: AttributeSet? = null) : 
         }
 
         var counter = 0;
-        var tableRow = TableRow(context)
+        var tableRow = TableRow(context)//
+
+
+        run{
+//            tableRow = TableRow(context)
+//
+//            this.addView(
+//                tableRow,
+//                LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+//            );//
+//            tableRow
+//            rows.add(tableRow)
+//
+//            tableRow.layoutParams = LayoutParams(
+//                LayoutParams.WRAP_CONTENT,
+//                LayoutParams.WRAP_CONTENT
+//            )
+//
+//            for (i in 0..6){
+//                var btn = Button(context,attrs)
+//                btn.setText("${i}")
+//                tableRow.addView(btn)
+//            }
+        }
 
         while (calMY.before(calPY)) {//1..20
 
@@ -70,24 +97,27 @@ class AstraMultiChoseCalendar(context: Context?, attrs: AttributeSet? = null) : 
 
                 this.addView(
                     tableRow,
-                    TableLayout.LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
+                    LayoutParams(LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT)
                 );//
 
                 rows.add(tableRow)
 
-                tableRow.layoutParams = TableLayout.LayoutParams(
-                    TableLayout.LayoutParams.WRAP_CONTENT,
-                    TableLayout.LayoutParams.WRAP_CONTENT
+                tableRow.layoutParams = LayoutParams(
+                    LayoutParams.WRAP_CONTENT,
+                    LayoutParams.WRAP_CONTENT
                 )
 
                 var tv = TextView(context, attrs)
-                tv.text = "${calMY.get(Calendar.YEAR)} / ${calMY.get(Calendar.MONTH) + 1}  ${calMY.get(Calendar.DAY_OF_MONTH)}:"
+                tv.text = "${calMY.get(Calendar.YEAR)} / ${calMY.get(Calendar.MONTH) + 1}:"//  ${calMY.get(Calendar.DAY_OF_MONTH)}
                 tableRow.addView(tv)
 
             }
 //            for (i in 1..12) {
 
-                var btn = CellButton(context, attrs, "0", "${counter}", result)
+            var btn = RelativeLayoutButton(context!!)//CellButton(context, attrs, "0", "${counter}", result)
+            btn.setMainText(calMY.get(Calendar.DAY_OF_MONTH).toString());
+            btn.setMarkText("0")
+
 //            btn.layoutParams = ViewGroup.LayoutParams(100, 100)
                 btn.setOnClickListener(View.OnClickListener {
                     if (!firstChosen) {
@@ -106,6 +136,7 @@ class AstraMultiChoseCalendar(context: Context?, attrs: AttributeSet? = null) : 
                                     colored++
                                 } else btni.chosen = colored == 1
                             }
+                            btn.buttonClicked(true)
                         }
                     } else {
                         firstChosen = false

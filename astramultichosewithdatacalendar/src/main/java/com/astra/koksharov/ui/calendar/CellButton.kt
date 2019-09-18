@@ -6,14 +6,15 @@ import android.support.annotation.IntegerRes
 import android.util.AttributeSet
 import android.widget.Button
 import android.widget.TextView
-import android.support.v4.content.ContextCompat.getSystemService
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import android.widget.ImageButton
+import android.widget.LinearLayout
 import com.astra.koksharov.astramultichosewithdatacalendar.R
 import java.util.*
 
-class CellButton(context: Context?, attrs: AttributeSet?) : android.support.v7.widget.AppCompatButton(context, attrs) {
+class CellButton(context: Context?, attrs: AttributeSet?) : android.support.v7.widget.AppCompatButton(context, attrs) {//android.support.v7.widget.AppCompatButton LinearLayout ImageButton Button
 
     var chosen = false
         get() : Boolean {return field }
@@ -42,10 +43,10 @@ class CellButton(context: Context?, attrs: AttributeSet?) : android.support.v7.w
     init {
         val layoutInflater = LayoutInflater.from(context)//context!!.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
         val view = layoutInflater.inflate(R.layout.cell_button, null)//parent as (ViewGroup?)
-//        layoutParams = ;
 
 //        view_group.add(view)z
 //        icon = view.findViewById(R.id.xbutton2_icon) as ImageView
+
         main_tv = view.findViewById(R.id.cellMainTextView) as TextView
         mark_tv = view.findViewById(R.id.cellMarkTextView) as TextView
 
