@@ -16,9 +16,11 @@ import android.widget.ImageView
 import com.astra.koksharov.astramultichosewithdatacalendar.R
 import kotlinx.android.synthetic.main.cell_rl_button.view.*
 import org.w3c.dom.Text
+import java.util.*
+import kotlin.collections.ArrayList
 
 
-class RelativeLayoutButton(context: Context) : RelativeLayout(context) {
+class RelativeLayoutButton(context: Context, calendar: Calendar) : RelativeLayout(context) {
 
     var chosen = false
         get() : Boolean {return field }
@@ -33,6 +35,8 @@ class RelativeLayoutButton(context: Context) : RelativeLayout(context) {
     var backColor = Color.argb(127, 50, 100, 200)
 
     var tvArray = ArrayList<TextView>()
+
+    lateinit var calendar : Calendar
 
     init {
 
@@ -101,6 +105,12 @@ class RelativeLayoutButton(context: Context) : RelativeLayout(context) {
 //        vp.addView(this, index)
 
         this.id = id
+
+        this.calendar = Calendar.getInstance()
+        this.calendar.time = calendar.time
+        setMarkText("0")
+        setMainText(this.calendar.get(Calendar.DAY_OF_MONTH).toString())
+
         setBackgroundColor(backColor)
     }
 

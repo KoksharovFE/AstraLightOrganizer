@@ -133,12 +133,14 @@ class OrganizerCalendar : View {
 
         exampleString?.let {
             // Draw the text.
-            canvas.drawText(
-                it,
-                paddingLeft + (contentWidth - textWidth) / 2,
-                paddingTop + (contentHeight + textHeight) / 2,
-                textPaint
-            )
+            textPaint?.let { it1 ->
+                canvas.drawText(
+                    it,
+                    paddingLeft + (contentWidth - textWidth) / 2,
+                    paddingTop + (contentHeight + textHeight) / 2,
+                    it1
+                )
+            }
         }
 
         // Draw the example drawable on top of the text.

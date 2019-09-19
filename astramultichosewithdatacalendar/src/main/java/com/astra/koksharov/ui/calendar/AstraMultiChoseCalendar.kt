@@ -112,13 +112,9 @@ class AstraMultiChoseCalendar(context: Context?, attrs: AttributeSet? = null) : 
                 tableRow.addView(tv)
 
             }
-//            for (i in 1..12) {
 
-            var btn = RelativeLayoutButton(context!!)//CellButton(context, attrs, "0", "${counter}", result)
-            btn.setMainText(calMY.get(Calendar.DAY_OF_MONTH).toString());
-            btn.setMarkText("0")
+            var btn = RelativeLayoutButton(context!!, calMY)//CellButton(context, attrs, "0", "${counter}", result)
 
-//            btn.layoutParams = ViewGroup.LayoutParams(100, 100)
                 btn.setOnClickListener(View.OnClickListener {
                     if (!firstChosen) {
                         btn.buttonClicked(true)
@@ -155,7 +151,7 @@ class AstraMultiChoseCalendar(context: Context?, attrs: AttributeSet? = null) : 
                 counter++
 //            }
 
-            scrollView.scrollTo(10000,  100)//scrollView.maxScrollAmount / 2
+            scrollView.scrollTo(20000,  100)//scrollView.maxScrollAmount / 2
 
         }
 
