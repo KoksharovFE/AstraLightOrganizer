@@ -14,7 +14,7 @@ import android.widget.LinearLayout
 import com.astra.koksharov.astramultichosewithdatacalendar.R
 import java.util.*
 
-class CellButton(context: Context?, attrs: AttributeSet?) : android.support.v7.widget.AppCompatButton(context, attrs) {//android.support.v7.widget.AppCompatButton LinearLayout ImageButton Button
+class CellButton(context: Context?, attrs: AttributeSet?) : Button(context, attrs) {//android.support.v7.widget.AppCompatButton LinearLayout ImageButton Button
 
     var chosen = false
         get() : Boolean {return field }

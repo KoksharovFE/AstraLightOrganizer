@@ -20,7 +20,7 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 
-class RelativeLayoutButton(context: Context, calendar: Calendar) : RelativeLayout(context) {
+class AstraRLCellButton(context: Context, calendar: Calendar) : RelativeLayout(context) {
 
     var chosen = false
         get() : Boolean {return field }
@@ -65,7 +65,7 @@ class RelativeLayoutButton(context: Context, calendar: Calendar) : RelativeLayou
         // here I am using temporary instance of Button class
         // to get standard button background and to get button text color
 
-        val bt = AppCompatButton(context)
+        val bt = AppCompatButton(context)//AppCompatButton(context)
         this.setBackgroundDrawable(bt.getBackground())
 
         // copy all child from relative layout to this button
